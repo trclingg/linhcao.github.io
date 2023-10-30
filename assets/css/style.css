@@ -332,7 +332,9 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  
+  /* max-height: 405px; */
+  max-height: max-content;
 }
 
 .sidebar-info {
@@ -1574,12 +1576,15 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
-    max-height: 180px;
+    /* max-height: 180px; */
+    height: max-content;
     margin-bottom: 30px;
   }
 
   .sidebar.active {
-    max-height: 584px;
+    height: fit-content;
+
+    /* max-height: 584px; */
   }
 
   .sidebar-info {
