@@ -1,6 +1,66 @@
 'use strict';
 
+// try typing
 
+
+var txt1 = `Welcome to my digital space!
+I'm Linh Cao, a third-year Computer Science student at Drexel University, with
+a concentration in AI and Machine Learning and a minor in Mathematics.`; /* The text */
+var txt2 = `I believe in the power of innovation and the potential of technology to transform the way we live and work.
+My academic journey has equipped me with the skills to tackle complex challenges and the vision to shape a
+smarter, more connected future.`;
+var txt3 = `As an inquisitive explorer in the tech world, I'm always on the lookout for fresh and exciting opportunities
+to collaborate, learn, and make an impact. Let's connect, explore, and embark on the next technological
+adventure together.`;
+var speed = 20; /* The speed/duration of the effect in milliseconds */
+let i = 0;
+let j = 0;
+let k = 0;
+function typeWriter() {
+
+  if (i < txt1.length) {
+    document.getElementById("typing-demo").innerHTML += txt1.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+  else {
+    typeWriter2()
+  }
+}
+
+function typeWriter2() {
+  if (j < txt2.length) {
+
+    document.getElementById("typing-demo2").innerHTML += txt2.charAt(j);
+    j++;
+    setTimeout(typeWriter2, speed);
+  }
+  else {
+    document.getElementById("avatar-img").src = "./assets/images/memoji2.GIF";
+
+    typeWriter3()
+  }
+}
+function typeWriter3() {
+  if (k < txt3.length) {
+
+    document.getElementById("typing-demo3").innerHTML += txt3.charAt(k);
+    k++;
+    setTimeout(typeWriter3, speed);
+  }
+
+}
+
+
+window.onload = function () {
+  typeWriter();
+
+
+}
+
+
+
+// try typing
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -156,61 +216,75 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
-
-
-
-
 }
 
 // projects variables
 const projectsItem = document.querySelectorAll("[data-projects-item]");
-// console.log(projectsItem[0])
-// console.log(projectsItem[1])
+
 
 const modalContainerProj = document.querySelector("[data-modal-container]");
 const modalCloseBtnProj = document.querySelector("[data-modal-close-btn]");
 const overlayProj = document.querySelector("[data-overlay]");
 
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
+const modalImg = document.querySelector("[modal-img-wrapper]");
+
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 const modalGit = document.querySelector("[data-modal-git]");
 // modal toggle function
 const projectsModalFunc = function () {
-    // alert("open");
-    // console.log(modalContainerProj)
-    modalContainerProj.classList.toggle("active");
-    overlayProj.classList.toggle("active");
+    
+  modalContainerProj.classList.toggle("active");
+  overlayProj.classList.toggle("active");
 }
-
+const projectsModalFuncClose = function () {
+  modalContainerProj.classList.remove("active");
+  overlayProj.classList.remove("active");
+  
+}
 // add click event to all modal items
 for (let i = 0; i < projectsItem.length; i++) {
+  projectsItem[i].addEventListener("click", function () {
+  
+    // img
+    // get the link
+    const linkList = projectsItem[i].querySelector("#linkList");
 
-    projectsItem[i].addEventListener("click", function () {
+    // Select all the <a> elements within the <ul>
+    const links = linkList.querySelectorAll(".imgUrl");
+    // Initialize an array to store the href values
+    const linkArray = [];
 
-        modalImg.src = this.querySelector("[data-projects-avatar]").src;
-        // modalImg.alt = this.querySelector("[data-projects-avatar]").alt;
-        // modalTitle.innerHTML = this.querySelector("[data-projects-title]").innerHTML;
-        modalText.innerHTML = this.querySelector("[data-projects-text]").innerHTML;
-        // modalText.style.color = 'hsl(0, 0%, 84%)';
-        modalGit.href = this.querySelector("[data-projects-git]").innerHTML;
-        projectsModalFunc();
-
+    // Loop through the links and collect their href values
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      linkArray.push(href);
     });
 
-}
+    // linkArray now contains the href values as an array of strings
+    console.log(linkArray);
+    modalImg.innerHTML = ""
+    for (let j = 0; j < linkArray.length; j++) {
+      const paragraph = document.createElement("div");
+      paragraph.innerHTML = `<figure class="modal-avatar-box">
+      <img style=" width: 100% ;border-radius: 14px; margin-bottom: 15px;" src="${linkArray[j]}"  data-modal-img>
+    </figure>`;
+
+      // Append the paragraph element to the modal container
+      modalImg.appendChild(paragraph);
+    }
+    // img
+    modalText.innerHTML = this.querySelector("[data-projects-text]").innerHTML;
+    modalGit.href = this.querySelector("[data-projects-git]").innerHTML;
+    projectsModalFunc();
+  })
+};
 
 // add click event to modal close button
 modalCloseBtnProj.addEventListener("click", projectsModalFuncClose);
 overlayProj.addEventListener("click", projectsModalFunc);
 
-const projectsModalFuncClose = function () {
-  // alert("bye");
-  modalContainerProj.classList.toggle("active");
-  overlayProj.classList.toggle("active");
-  // console.log(modalContainerProj)
-}
+
 
 
 
