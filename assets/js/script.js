@@ -82,10 +82,7 @@ const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
 
-// // modal variable
-// const modalImg = document.querySelector("[data-modal-img]");
-// const modalTitle = document.querySelector("[data-modal-title]");
-// const modalText = document.querySelector("[data-modal-text]");
+
 
 // modal toggle function
 const testimonialsModalFunc = function () {
@@ -216,6 +213,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
   });
+
+
+
+
 }
 
 // projects variables
@@ -262,7 +263,7 @@ for (let i = 0; i < projectsItem.length; i++) {
     });
 
     // linkArray now contains the href values as an array of strings
-    console.log(linkArray);
+    // console.log(linkArray);
     modalImg.innerHTML = ""
     for (let j = 0; j < linkArray.length; j++) {
       const paragraph = document.createElement("div");
@@ -273,8 +274,9 @@ for (let i = 0; i < projectsItem.length; i++) {
       // Append the paragraph element to the modal container
       modalImg.appendChild(paragraph);
     }
-    // img
+    // done img
     modalText.innerHTML = this.querySelector("[data-projects-text]").innerHTML;
+    modalTitle.innerHTML = this.querySelector("[data-projects-title]").innerHTML;
     modalGit.href = this.querySelector("[data-projects-git]").innerHTML;
     projectsModalFunc();
   })
