@@ -215,12 +215,14 @@
               </p>
               <br>
               <p class="timeline-text" style="font-size: smaller;">
-                Top Honor for Academic Excellence Award
-              </p>
-              <p class="timeline-text" style="font-size: smaller;">
+                <b> Awards: </b>
+               
+              
+              <p class="timeline-text" style="font-size: smaller; color: hsl(45, 100%, 72%);">
+                Top Honor for Academic Excellence Award, &nbsp;
                 City-Level Practical Science Knowledge Silver Medal
               </p>
-
+            </p>
             </li>
 
             <li class="timeline-item">
@@ -228,13 +230,25 @@
               <h4 class="h4 timeline-item-title">Drexel University</h4>
 
               <span>2021 — 2026, USA</span>
-              <p class="timeline-text">
-                <i>Cumulative GPA: </i> 3.94
-              </p>
-              <p class="timeline-text" style="color: hsl(45, 100%, 72%);">
-                <i>Dean’s List, AJ Drexel Scholarship, CCI WIT Initiative Scholarship 2023 </i>
+              <p class="timeline-text" style="font-size: smaller;">
+                Cumulative GPA: &nbsp;
+                <b style="color: hsl(45, 100%, 72%);">3.94</b> / 4.00
               </p>
               <br>
+              <p class="timeline-text" style="font-size: smaller;">
+                <b> Awards: </b> 
+              <p  style="font-size: smaller; color: hsl(45, 100%, 72%);">
+                Dean’s List, &nbsp;
+                AJ Drexel Scholarship, &nbsp;
+                College of Computing and Informatics WIT Initiative Scholarship 2023 &nbsp;
+              </p>
+              </p>
+              <br>
+              <br>
+              <ol class="timeline-list">
+
+                <li class="timeline-item">
+                
               <p class="timeline-text" style="font-size: smaller;">
                 <i><b>College of Computing & Informatics</b></i>
               </p>
@@ -256,6 +270,8 @@
               </p>
 
               <br>
+            </li>
+            <li class="timeline-item">
               <p class="timeline-text" style="font-size: smaller;">
                 <i><b>College of Arts and Sciences</i></b>
               </p>
@@ -263,7 +279,8 @@
                 <b style="color: hsl(45, 100%, 72%);">Minor</b> in <b style="color: hsl(45, 100%, 72%);">Mathematics
                 </b>
               </p>
-
+            </li>
+            </ol>
             </li>
 
           </ol>
@@ -590,7 +607,7 @@
               </p>
               <br>
               <p class="timeline-text" style="font-size: smaller;">
-                • Instruct multiple classes with an average class size of 100 students in lab sessions, help to deepen
+                <!-- • Instruct multiple classes with an average class size of 100 students in lab sessions, help to deepen
                 understanding of technical concepts
                 <br>
                 • Conduct rigorous code reviews, create and execute comprehensive test cases to ensure and enhance code
@@ -600,7 +617,7 @@
                 students per week for lab and homework assignment, ensuring timely and constructive feedback delivery
                 <br>
                 • Facilitated weekly office hours to provide individualized assistance, leading to a significant
-                improvement in assignment quality
+                improvement in assignment quality -->
 
               </p>
             </li>
@@ -615,7 +632,7 @@
               </p>
               <br>
               <p class="timeline-text" style="font-size: smaller;">
-                • Enhanced the development of front-end and back-end components, optimized performance through agile
+                <!-- • Enhanced the development of front-end and back-end components, optimized performance through agile
                 coding practices, which led to a substantial 25% reduction in page load times and a highly improved user
                 experience
                 <br>
@@ -628,7 +645,7 @@
                 <br>
                 • Demonstrated excellence in API integration and MongoDB connections, streamlining data handling
                 processes and achieving a remarkable increase in data retrieval efficiency
-                <br>
+                <br> -->
 
               </p>
 
@@ -838,7 +855,7 @@
         <section class="projects">
 
           <ul class="filter-list">
-
+            <!-- List in full view-->
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
@@ -851,9 +868,12 @@
               <button data-filter-btn>Game</button>
             </li>
 
+            <li class="filter-item">
+              <button data-filter-btn>Back-end</button>
+            </li>
 
           </ul>
-
+           <!-- List in phone view-->
           <div class="filter-select-box">
 
             <button class="filter-select" data-select>
@@ -880,15 +900,56 @@
                 <button data-select-item>Game</button>
               </li>
 
-              <!-- <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li> -->
+              <li class="select-item">
+                <button data-select-item>Back-end</button>
+              </li>
+
+              
 
             </ul>
 
           </div>
 
           <ul class="project-list">
+            <li class="project-item  active" data-filter-item data-category="game" data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/frogger-project/cover-photo-2.png" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <p class="projects-text" data-projects-text> 
+                  This is the implementation of a Reinforcement Learning (RL) agent designed to play the classic Frogger game. 
+                  <br>
+                  The RL agent is trained using the Q-learning algorithm, allowing it to make informed decisions based on learned state-action pairs.<br>
+                  
+                  The game includes three difficulty levels—easy, medium, and hard. (Real implementation displayed below)
+                  <br>
+                  <i style="color: hsl(45, 100%, 72%); font-size: smaller;">
+                  Python, Machine Learning, Reinforcement Learning, Q-Learning </i>
+                
+                </p>
+                <p class="projects-git" data-projects-git>https://github.com/trclingg/Frogger-Classic-Agent.git</p>
+
+                <h3 class="project-title" data-projects-title>
+                  Frogger Classic</h3>
+
+                <p class="project-category">Game</p>
+                <div>
+                  <ul id="linkList" style="display: none;">
+                    <li >Easy Mode</li>
+                    <li><a class="imgUrl" href="./assets/images/frogger-project/easy-frogger.gif"></a></li>
+                    <li><a class="imgUrl" href="./assets/images/frogger-project/med-frogger.gif"></a></li>
+                    <li><a class="imgUrl" href="./assets/images/frogger-project/hard-frogger.gif"></a></li>
+                    <!-- <li><a class="imgUrl" href="./assets/images/project-4.png">Link 3</a></li> -->
+                  </ul>
+                </div>
+              </a>
+            </li>
 
             <li class="project-item  active" data-filter-item data-category="web development" data-projects-item>
               <a href="#">
@@ -913,7 +974,7 @@
                 <h3 class="project-title" data-projects-title>
                  Lucky Dice Casino</h3>
 
-                <p class="project-category">Web Development</p>
+                <p class="project-category">Web, Full-stack</p>
                 <div>
                   <ul id="linkList" style="display: none;">
                     <li><a class="imgUrl" href="./assets/images/lucky-dice-project/lucky-dice1.png"></a></li>
@@ -934,7 +995,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/rg-puzzle-project/rbg-puzzle-slider-cover.png" loading="lazy" data-projects-avatar>
+                  <img src="./assets/images/rg-puzzle-project/cover-photo.jpeg" loading="lazy" data-projects-avatar>
                 </figure>
 
                 <p class="projects-text" data-projects-text> 
@@ -962,6 +1023,69 @@
               </a>
             </li>
 
+            <li class="project-item  active" data-filter-item data-category="back-end" data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/banking-project/cover-photo-2.png" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <p class="projects-text" data-projects-text> 
+                  The project's primary focus is to implement a Bank with different account types, incorporating Java, OOP design principles and TDD methodologies. <br> The system will support three types of accounts: Checking, Savings, and Certificate of Deposit (CD).<br>
+                <i style="color: hsl(45, 100%, 72%); font-size: smaller;">
+                  Java, Object-Oriented Programming, Test Driven Development, JUnit Test, IntelIJ</i>
+                
+                </p>
+                <p class="projects-git" data-projects-git> https://github.com/trclingg/Java-Bank-Management-System/</p>
+
+                <h3 class="project-title" data-projects-title>
+                  Bank Management System</h3>
+
+                <p class="project-category">Back End</p>
+                <div>
+                  <ul id="linkList" style="display: none;">
+                    <li><a class="imgUrl" href="./assets/images/banking-project/detail-photo.webp"></a></li>
+                    
+                  </ul>
+                </div>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="game" data-projects-item>
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/connect-3-project/cover-photo.webp" loading="lazy" data-projects-avatar>
+                </figure>
+
+                <p class="projects-text" data-projects-text> 
+                  The project is implementation of a game agent using the Minimax algorithm, a powerful technique in adversarial search. It focuses on creating an AI player that can make informed decisions to outsmart its opponent and secure a winning position in the Connect 3 game.<br>
+                <i style="color: hsl(45, 100%, 72%); font-size: smaller;">
+                  Python, Artificial Intelligence, Adversarial Search, Minimax Algorithm, Object-Oriented Programming, Command-Line Interface               </i>
+                
+                </p>
+                <p class="projects-git" data-projects-git> https://github.com/trclingg/connect-3-player.git</p>
+
+                <h3 class="project-title" data-projects-title>
+                  Connect 3</h3>
+
+                <p class="project-category">Game</p>
+                <div>
+                  <ul id="linkList" style="display: none;">
+                    <li><a class="imgUrl" href="./assets/images/connect-3-project/detail-photo.jpg"></a></li>
+                    <!-- <li><a class="imgUrl" href="./assets/images/project-4.png">Link 3</a></li> -->
+                  </ul>
+                </div>
+              </a>
+            </li>
 
           </ul>
 

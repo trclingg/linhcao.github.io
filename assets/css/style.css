@@ -1148,6 +1148,7 @@ main {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
+  /* -webkit-filter: grayscale(20%); */
 }
 
 
@@ -1158,7 +1159,7 @@ main {
   left: 0;
   width: 100%;
   /* height: 200px; */
-
+  
   height: 100%;
   background: transparent;
   z-index: 1;
@@ -1506,9 +1507,19 @@ textarea.form-input::-webkit-resizer {
    * #PORTFOLIO, BLOG 
    */
 
-  .project-img,
+  
   .blog-banner-box {
     height: auto;
+  }
+
+  project-img img {
+    width: 100%;
+    border-radius: 15px;
+    /* height: 100%; */
+    /* width: 200px; */
+    height: 300px;
+    object-fit: fit;
+    transition: var(--transition-1);
   }
 
 }
