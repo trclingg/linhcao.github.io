@@ -9,7 +9,7 @@ a concentration in AI and Machine Learning and a minor in Mathematics.`; /* The 
 var txt2 = `I believe in the power of innovation and the potential of technology to transform the way we live and work.
 My academic journey has equipped me with the skills to tackle complex challenges and the vision to shape a
 smarter, more connected future.`;
-var txt3 = `As an inquisitive explorer in the tech world, I'm always on the lookout for fresh and exciting opportunities
+var txt3 = `As an inquisitive explorer in the tech world, I'm always on the lookout for exciting internship opportunities
 to collaborate, learn, and make an impact. Let's connect, explore, and embark on the next technological
 adventure together.`;
 var speed = 20; /* The speed/duration of the effect in milliseconds */
