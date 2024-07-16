@@ -3,9 +3,7 @@
 // try typing
 
 
-var txt1 = `Welcome to my digital space!
-I'm Linh Cao, a third-year Computer Science student at Drexel University, with
-a concentration in AI and Machine Learning and a minor in Mathematics.`; /* The text */
+var txt1 = `P/s: Hi readers, I am Linh. Welcome to my digital space! `; /* The text */
 var txt2 = `I believe in the power of innovation and the potential of technology to transform the way we live and work.
 My academic journey has equipped me with the skills to tackle complex challenges and the vision to shape a
 smarter, more connected future.`;
@@ -232,6 +230,7 @@ const modalImg = document.querySelector("[modal-img-wrapper]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 const modalGit = document.querySelector("[data-modal-git]");
+const modalTime = document.querySelector("[data-modal-time]");
 // modal toggle function
 const projectsModalFunc = function () {
     
@@ -248,6 +247,9 @@ for (let i = 0; i < projectsItem.length; i++) {
   projectsItem[i].addEventListener("click", function () {
   
     // img
+    // get id
+    // console.log(projectsItem[i].id); 
+    const projectId = projectsItem[i].id
     // get the link
     const linkList = projectsItem[i].querySelector("#linkList");
 
@@ -278,6 +280,9 @@ for (let i = 0; i < projectsItem.length; i++) {
     modalText.innerHTML = this.querySelector("[data-projects-text]").innerHTML;
     modalTitle.innerHTML = this.querySelector("[data-projects-title]").innerHTML;
     modalGit.href = this.querySelector("[data-projects-git]").innerHTML;
+    modalTime.innerHTML = this.querySelector("[data-projects-time]").innerHTML;
+    //set id
+    // modalContainerProj.setAttribute("id", projectId);
     projectsModalFunc();
   })
 };
@@ -287,7 +292,26 @@ modalCloseBtnProj.addEventListener("click", projectsModalFuncClose);
 overlayProj.addEventListener("click", projectsModalFunc);
 
 
+// event for readmore
+function readMoreFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var readmoreText = document.getElementById("readmoreText");
+  var originalText = document.getElementById("originalText");
 
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    readmoreText.innerHTML = "Read more ↓";
+    moreText.style.display = "none";
+    originalText.style.display= "inline";
+  } else {
+    originalText.style.display = "none";
+    
+    dots.style.display = "none";
+    readmoreText.innerHTML = "Read less ↑";
+    moreText.style.display = "inline";
+  }
+}
 
 
 
