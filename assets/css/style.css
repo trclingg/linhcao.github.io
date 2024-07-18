@@ -2662,7 +2662,7 @@ textarea.form-input {
   min-height: fit-content;
   /* background: transparent; */
   /* padding: 20px; */
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1200px; /* Remove this if you don't want the 3D effect */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2711,7 +2711,7 @@ textarea.form-input {
   border-radius: inherit;
   /* position: absolute; */
   inset: 1px;
-  /* z-index: -1; */
+  z-index: 0;
   
   
 }
@@ -2732,6 +2732,7 @@ textarea.form-input {
   /* z-index: 1; */
   left: -10px;
   top: -12px;
+  z-index: 1;
 }
 
 .interests .flip-card-back p {
