@@ -236,8 +236,12 @@ const projectsModalFunc = function () {
     
   modalContainerProj.classList.toggle("active");
   overlayProj.classList.toggle("active");
+  document.body.classList.add('no-scroll');
+  document.body.classList.remove('scroll-auto');
 }
 const projectsModalFuncClose = function () {
+  document.body.classList.remove('no-scroll');
+  document.body.classList.add('scroll-auto');
   modalContainerProj.classList.remove("active");
   overlayProj.classList.remove("active");
   
