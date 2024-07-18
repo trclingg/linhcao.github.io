@@ -291,6 +291,8 @@ article.active {
   box-shadow: var(--shadow-2);
   cursor: pointer;
   z-index: 1;
+  transition: transform 0.3s ease-in-out;
+  
 }
 
 .content-card::before {
@@ -300,6 +302,10 @@ article.active {
   background: var(--bg-gradient-jet);
   border-radius: inherit;
   z-index: -1;
+  /* scale: 1.5; */
+}
+.content-card:hover {
+  transform: scale(1.01);
 }
 
 
@@ -634,6 +640,10 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+.coursework-item:hover {
+  transform: scale(1.015);
 }
 
 .coursework-item::before {
@@ -752,6 +762,7 @@ main {
   visibility: hidden;
   max-height: calc(100vh - 80px);
   overflow-y: auto;
+  box-shadow: var(--shadow-2);
 }
 
 .modal-container::-webkit-scrollbar {
@@ -1208,7 +1219,17 @@ span.job-des {
 
 .project-item>a:hover .project-img::before {
   background: hsla(0, 0%, 0%, 0.5);
+  
 }
+
+.project-item>a:hover .project-title {
+  color: var(--orange-yellow-crayola);
+  
+}
+.project-item>a:hover .project-category {
+  color: white;
+}
+
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -2545,11 +2566,11 @@ textarea.form-input {
 /* Skill flip card */
 /* The flip card container  */
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 90px;
   height: 100px;
   /* border: 1px solid #f1f1f1; */
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1200px; /* Remove this if you don't want the 3D effect */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2563,6 +2584,7 @@ textarea.form-input {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
   
 }
 
@@ -2578,7 +2600,7 @@ textarea.form-input {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 /* Style the front side (fallback if image is missing) */
@@ -2586,6 +2608,9 @@ textarea.form-input {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* box-shadow: var(--shadow-2); */
+  transform: rotateY(360deg);
+  z-index: 0;
 }
 
 /* Style the back side */
@@ -2596,6 +2621,9 @@ textarea.form-input {
   transform: rotateY(180deg);
   text-align: center;
   color: var(--orange-yellow-crayola);
+  /* background: var(--bg-gradient-jet); */
+  z-index: 1;
+  
 }
 /* Float animation */
 .floating {  
@@ -2632,7 +2660,7 @@ textarea.form-input {
   width: 50%;
   height: 200px;
   min-height: fit-content;
-  background: transparent;
+  /* background: transparent; */
   /* padding: 20px; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   display: flex;
@@ -2655,6 +2683,8 @@ textarea.form-input {
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  -webkit-transform: translateZ(0);
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -2681,7 +2711,7 @@ textarea.form-input {
   border-radius: inherit;
   position: absolute;
   inset: 1px;
-  z-index: -1;
+  /* z-index: -1; */
   
   
 }
@@ -2699,7 +2729,7 @@ textarea.form-input {
   font-size: smaller;
   padding: 20px;
   border-radius: 14px;
-  z-index: 1;
+  /* z-index: 1; */
   left: -10px;
   top: -12px;
 }
