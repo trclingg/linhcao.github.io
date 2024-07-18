@@ -2692,7 +2692,7 @@ textarea.form-input {
 }
 
 /* Position the front and back side */
-.interests .flip-card-front, .flip-card-back {
+.interests .flip-card-front, .interests .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
