@@ -2683,7 +2683,7 @@ textarea.form-input {
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  transform: rotateY(0deg);
+  /* transform: rotateY(0deg); */
   -webkit-transform: translateZ(0);
 }
 
@@ -2709,7 +2709,7 @@ textarea.form-input {
   justify-content: center;
   background: var(--bg-gradient-jet);
   border-radius: inherit;
-  position: absolute;
+  /* position: absolute; */
   inset: 1px;
   /* z-index: -1; */
   
