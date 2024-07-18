@@ -2608,7 +2608,6 @@ textarea.form-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* box-shadow: var(--shadow-2); */
   transform: rotateY(360deg);
   z-index: 0;
 }
@@ -2621,7 +2620,6 @@ textarea.form-input {
   transform: rotateY(180deg);
   text-align: center;
   color: var(--orange-yellow-crayola);
-  /* background: var(--bg-gradient-jet); */
   z-index: 1;
   
 }
@@ -2688,8 +2686,9 @@ textarea.form-input {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.interests .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.interests .flip-card:hover .flip-card-inner, 
+.interests .flip-card:focus .flip-card-inner {
+  transform: rotateY(181deg);
 }
 
 /* Position the front and back side */
@@ -2709,7 +2708,7 @@ textarea.form-input {
   justify-content: center;
   background: var(--bg-gradient-jet);
   border-radius: inherit;
-  /* position: absolute; */
+  transform: rotateY(360deg);
   inset: 1px;
   z-index: 0;
   
@@ -2724,12 +2723,10 @@ textarea.form-input {
   align-items: center;
   justify-content: center;
   transform: rotateY(180deg);
-  /* text-align: center; */
   color: var(--light-gray);
   font-size: smaller;
   padding: 20px;
   border-radius: 14px;
-  /* z-index: 1; */
   left: -10px;
   top: -12px;
   z-index: 1;
