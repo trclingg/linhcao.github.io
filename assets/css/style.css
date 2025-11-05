@@ -2734,13 +2734,16 @@ textarea.form-input {
   align-items: center;
   justify-content: center;
   transform: rotateY(180deg);
-  color: var(--light-gray);
+  /* color: var(--light-gray); */
   font-size: smaller;
   padding: 20px;
   border-radius: 14px;
   left: -10px;
   top: -12px;
   z-index: 1;
+  color: var(--orange-yellow-crayola);
+  /* background: var(--bg-gradient-jet) */
+  /* background: var(--border-gradient-onyx); */
 }
 
 .interests .flip-card-back p {
