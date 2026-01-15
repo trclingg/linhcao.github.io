@@ -4,10 +4,10 @@
 
 
 var txt1 = `P/s: Hi readers, I am Linh. Welcome to my digital space! `; /* The text */
-var txt2 = `I believe in the power of innovation and the potential of technology to transform the way we live and work.
-My academic journey has equipped me with the skills to tackle complex challenges and the vision to shape a
-smarter, more connected future.`;
-var txt3 = `As an inquisitive explorer in the tech world, I'm always on the lookout for exciting opportunities
+// var txt2 = `I believe in the power of innovation and the potential of technology to transform the way we live and work.
+// My academic journey has equipped me with the skills to tackle complex challenges and the vision to shape a
+// smarter, more connected future.`;
+var txt2 = `As an inquisitive explorer in the tech world, I'm always on the lookout for exciting opportunities
 to collaborate, learn, and make an impact. Let's connect, explore, and embark on the next technological
 adventure together.`;
 var speed = 20; /* The speed/duration of the effect in milliseconds */
@@ -36,18 +36,18 @@ function typeWriter2() {
   else {
     document.getElementById("avatar-img").src = "./assets/images/memoji2.GIF";
 
-    typeWriter3()
+    // typeWriter3()
   }
 }
-function typeWriter3() {
-  if (k < txt3.length) {
+// function typeWriter3() {
+//   if (k < txt3.length) {
 
-    document.getElementById("typing-demo3").innerHTML += txt3.charAt(k);
-    k++;
-    setTimeout(typeWriter3, speed);
-  }
+//     document.getElementById("typing-demo3").innerHTML += txt3.charAt(k);
+//     k++;
+//     setTimeout(typeWriter3, speed);
+//   }
 
-}
+// }
 
 
 window.onload = function () {
